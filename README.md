@@ -1,76 +1,72 @@
 
-# 个人简历
+<h1 align="center">
+AcadHomepage
+</h1>
 
-简体中文 | [English](en_README.MD)
+<div align="center">
 
----
+[![](https://img.shields.io/github/stars/RayeRen/acad-homepage.github.io)](https://github.com/RayeRen/acad-homepage.github.io)
+[![](https://img.shields.io/github/forks/RayeRen/acad-homepage.github.io)](https://github.com/RayeRen/acad-homepage.github.io)
+[![](https://img.shields.io/github/issues/RayeRen/acad-homepage.github.io)](https://github.com/RayeRen/acad-homepage.github.io)
+[![](https://img.shields.io/github/license/RayeRen/acad-homepage.github.io)](https://github.com/RayeRen/acad-homepage.github.io/blob/main/LICENSE)  | [中文文档](./docs/README-zh.md) 
+</div>
 
-## 🤵🏻 关于我
+<p align="center">A Modern and Responsive Academic Personal Homepage</p>
 
-黑子，1994年，浙江金华人。先后就读于浙江省东阳中学、浙江工业大学。大学期间一边学习一边积极参与学生工作，担任校团委新媒体组织负责人，浙江工业大学飞鹰班（学生精英培养工程）第九期学员。
+<p align="center">
+    <br>
+    <img src="docs/screenshot.png" width="100%"/>
+    <br>
+</p>
 
-2015年，大四期间主要以实习为主，先后从事于新媒体运营、安卓开发、iOS开发。2016年，毕业后专注前端开发，从原生Js到jQuery，再到ExtJs框架应用。2018年，各项目重构皆以VueJs生态框架为主。2020年，同时开发后端接口，后端开发以C#、Java为主。
+Some examples:
+- [Demo Page](https://rayeren.github.io/acad-homepage.github.io/)
+- [Personal Homepage of the author](https://rayeren.github.io/)
 
-我的性格：善于沟通，积极向上，完美主义，求知主义，学习与工作都应「知其然，知其所以然，知其必然」。
+## Key Features
+- **Automatically update google scholar citations**: using the google scholar crawler and github action, this REPO can update the author citations and publication citations automatically.
+- **Support Google analytics**: you can trace the traffics of your homepage by easy configuration.
+- **Responsive**: this homepage automatically adjust for different screen sizes and viewports.
+- **Beautiful and Simple Design**: this homepage is beautiful and simple, which is very suitable for academic personal homepage.
+- **SEO**: search Engine Optimization (SEO) helps search engines find the information you publish on your homepage easily, then rank it against similar websites.
 
-兴趣爱好：篮球、电影、看书、旅游、王者荣耀。
+## Quick Start
 
----
+1. Fork this REPO and rename to `USERNAME.github.io`, where `USERNAME` is your github USERNAME.
+1. Configure the google scholar citation crawler:
+    1. Find your google scholar ID in the url of your google scholar page (e.g., https://scholar.google.com/citations?user=SCHOLAR_ID), where `SCHOLAR_ID` is your google scholar ID.
+    1. Set GOOGLE_SCHOLAR_ID variable to your google scholar ID in `Settings -> Secrets -> Actions -> New repository secret` of the REPO website with `name=GOOGLE_SCHOLAR_ID` and `value=SCHOLAR_ID`.
+    1. Click the `Action` of the REPO website and enable the workflows by clicking *"I understand my workflows, go ahead and enable them"*. This github action will generate google scholar citation stats data `gs_data.json` in `google-scholar-stats` branch of your REPO. When you update your main branch, this action will be triggered. This action will also be trigger 08:00 UTC everyday.
+1. Generate favicon using [favicon-generator](https://redketchup.io/favicon-generator) and download all generated files to `REPO/images`.
+1. Modify the configuration of your homepage `_config.yml`:
+    1. `title`: the title of your homepage
+    1. `description`: the description of your homepage
+    1. `repository`: USER_NAME/REPO_NAME  
+    1. `google_analytics_id` (optional): google analytics ID
+    1. SEO Related keys (optional): get these keys from search engine consoles (e.g. Google, Bing and Baidu) and paste here.
+    1. `author`: the author information of this homepage, including some other websites, emails, city and univeristy.
+    1. More configuration details are described in the comments.
+1. Add your homepage content in `_pages/about.md`.
+    1. You can use html+markdown syntax just same as jekyll.
+    1. You can use a `<span>` tag with class `show_paper_citations` and attribute `data` to display the citations of your paper. Set the data to the google scholar paper ID. For
+        ```html
+        <span class='show_paper_citations' data='DhtAFkwAAAAJ:ALROH1vI_8AC'></span>
+        ``` 
+        > Q: How to get the google scholar paper ID?   
+        > A: Enter your google scholar homepage and click the paper name. Then you can see the paper ID from `citation_for_view=XXXX`, where `XXXX` is the required paper ID.
+1. Your page will be published at `https://USERNAME.github.io`.
 
-## 🖥 工作经历
+## Debug Locally
 
-### 2019 三月 - 2021 三月
-> [招银网络科技（杭州）有限公司](https://cmbnt.cmbchina.com/)
-> <br>前端开发工程师 - 项目经理
+1. Clone your REPO to local using `git clone`.
+1. Install Jekyll building environment, including `Ruby`, `RubyGems`, `GCC` and `Make` following [the installation guide](https://jekyllrb.com/docs/installation/#requirements).
+1. Run `bash run_server.sh` to start Jekyll livereload server.
+1. Open http://127.0.0.1:4000 in your browser.
+1. If you change the source code of the website, the livereload server will automatically refresh.
+1. When you finish the modification of your homepage, `commit` your changings and `push` to your remote REPO using `git` command.
 
-* 【工作内容】1. 招商银行app借贷业务的前端开发。2. 天眼数据监测系统的前后端开发。 3. 代码重构、技术分享等。
-* 【工作业绩】1. 移动端白屏加载优化，增强交互，提升首屏加载速度。 2. 公司内部多个管理系统的技术转型，前端采用Vue框架，后端C#技术框架改用Java，极大提升了项目代码的稳定性、可维护性。 3. 负责新技术的研究，并多次主动在内部开展技术分享会。
-* 【技术应用】jQuery、Vue、C#、Java等。
+# Acknowledges
 
----
-
-### 2018 四月 - 2019 三月
-> [浙江宇石网络科技有限公司](https://www.zjyushi.com/)
-> <br>前端开发工程师 - 前端主管
-
-* 【工作内容】主要负责游戏相关业务的web端产品研发，包括H5游戏推广页、客户端内嵌H5页面、PC端的后台管理系统、游戏品牌官网等。同时负责公司前端业务需求梳理、工作量评估与排期、项目搭建与维护、组员代码的检验与重构、人员招聘等。
-* 【工作业绩】1. 项目重构，包括前后端分离改造、响应式布局、移动端适配。2. 提取后台管理系统模版，常用组件的封装抽离。3. 充分利用git分支管理，规范化前端项目的开发-提测-上线的部署流程。
-* 【技术应用】Vue全家桶（Vue CLI3 + Vue + Vue Router + Axios + Vuex + VeeVaidate）、ElementUI、MintUI等。
-
----
-
-### 2016 二月 - 2018 四月
-> [浙江飞阅文化创意有限公司](https://www.flyread.cn/)
-> <br>前端开发工程师 - H5开发组长
-
-* 【工作内容】主要负责图书馆相关业务的web端产品研发，包括web桌面系统应用、移动端H5应用。同时兼顾一些临时需求的研发，比如H5运营推广页、公司官网、IP白名单操作网页等。
-* 【工作业绩】主导完成OPAC-H5应用项目的研发与上线。
-* 【技术应用】jQuery、jQuery Mobile、ExtJs等。
-
----
-
-## 🎓 Education
-
-### 2012 九月 - 2016 六月
-> [浙江工业大学](https://www.zjut.edu.cn/) 
-> <br>计算机科学与技术学院、软件学院
-
-* 浙江工业大学是一所综合性的浙江省属重点大学，始建于1953年，学校坐落于历史文化名城、世界著名的风景游览胜地－浙江省杭州市。
-* 主修课程：C++程序设计、Java程序设计、Web应用开发、手机软件开发、计算机网络原理、操作系统原理、数据库原理及应用、数据结构、高等数学、离散数学等。
-
-### 2009 九月 - 2012 六月
-> [浙江省东阳中学](http://www.zjdyzx.com/) 
-> <br>理科
-
-* 东阳中学是浙江省一级重点高中，创办于1912年原清代东白书院旧址。
-
----
-
-## 🛠 专业技能
-
-常用软件/工具: VSCode, Git, SVN, 禅道, YApi, Jenkins, Tunnelblick, FileZilla, Foxmail, Chrome浏览器, 钉钉等。
-
-### 技能清单
-| Html/Css/Js | jQuery | VueJs | ExtJs | C# | Java | NodeJs | Weixin Mini Program | iOS/Android |
-| --------- | --------- | --------- | --------- | --------- | --------- | --------- | --------- | --------- |
-| 90% | 80%| 80%| 70% | 70% | 60% | 60% | 60% | 20% |
+- AcadHomepage incorporates Font Awesome, which is distributed under the terms of the SIL OFL 1.1 and MIT License.
+- AcadHomepage is influenced by the github repo [mmistakes/minimal-mistakes](https://github.com/mmistakes/minimal-mistakes), which is distributed under the MIT License.
+- AcadHomepage is influenced by the github repo [academicpages/academicpages.github.io](https://github.com/academicpages/academicpages.github.io), which is distributed under the MIT License.
