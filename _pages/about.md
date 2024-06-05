@@ -73,5 +73,6 @@ My research interest includes virtual avatar related thing and assistive robots.
 
 
 # 💻 Internships
+- *2023.07 - 2024.06*, Gesture Generation for Social Robots/Agents
 - *2021.06 - 2022.05*, Deep Learning Based Response Generation for Medical Conversation
 - *2021.10 - 2021.12*, Visualization and Validation of Models for Credit Risk
