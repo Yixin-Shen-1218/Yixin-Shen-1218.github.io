@@ -19,7 +19,7 @@ redirect_from:
 
 I am a Master of Computer Science student at the School of Computing & Information Systems, Faculty of Engineering and Information Technology, University of Melbourne. I received my Bechelor of Science - Computer Science with Artificial Intelligence at The University of Nottingham Ningbo China.
 
-My research interest includes embodied AI related thing. I have published **0** paper at the top international **AI**, **HCI** and **HRI** conferences with **0** citation.
+My research interest includes Embodied AI related thing. I have published **0** paper at the top international **AI**, **HCI** and **HRI** conferences with **0** citation.
 
 
 
