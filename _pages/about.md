@@ -75,4 +75,4 @@ My research interest includes Embodied AI related thing. I have published **0** 
 # 💻 Internships
 - *2023.07 - 2024.06*, Gesture Generation for Social Robots/Agents
 - *2021.06 - 2022.05*, Deep Learning Based Response Generation for Medical Conversation
-- *2022.06 - 2021.05*, Visualization and Validation of Models for Credit Risk
+- *2020.06 - 2021.05*, Visualization and Validation of Models for Credit Risk
