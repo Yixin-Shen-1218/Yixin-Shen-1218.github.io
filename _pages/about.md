@@ -53,7 +53,7 @@ My research interest includes Embodied AI related thing. I have published **0** 
 
 
 # 🎖 Honors and Awards
-- *2022.09* Melbourne Graduate Scholarship & Melbourne Welcome Grant
+- *2022.09* Melbourne Graduate Scholarship
 - *2022.06* Outstanding Graduate
 - *2021.09* 2020 Dean's Scholarship & 2020 Zhejiang Province Scholarship
 - *2020.10* University Club Leader Certificate & UNNC Book Club receives five-star club award
