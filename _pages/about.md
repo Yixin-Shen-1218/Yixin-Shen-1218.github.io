@@ -26,7 +26,7 @@ My research interest focuses on Embodied AI related thing. I have published **0*
 
 # 🔥 News
 - *2022.06*: &nbsp;🎉🎉 Graduated from the University of Nottingham Ningbo China
-
+- *2024.07*: &nbsp;🎉🎉 Graduated from the University of Melbourne
 
 
 
