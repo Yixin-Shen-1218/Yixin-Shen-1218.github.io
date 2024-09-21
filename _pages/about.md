@@ -21,13 +21,13 @@ I am a Master of Computer Science student at the School of Computing & Informati
 
 My research interest focuses on Embodied AI related thing. I have published **0** paper at the top international **AI**, **HCI** and **HRI** conferences with **0** citation.
 
-
+~My current research focuses on digital twins for manufacturing, especially on chemical fiber industry~
 
 
 # 🔥 News
 - *2022.06*: &nbsp;🎉🎉 Graduated from the University of Nottingham Ningbo China
 - *2024.07*: &nbsp;🎉🎉 Graduated from the University of Melbourne
-
+- *2024.08*: &nbsp;🎉🎉 Start a new role at Tongkun Co., Ltd as a Digital Transformation Analyst
 
 
 # 📝 Publications 
