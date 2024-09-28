@@ -2,10 +2,10 @@
 permalink: /TED_Culture
 title: "TED_Culture"
 excerpt: ""
-author_profile: true
-redirect_from: 
-  - /about/
-  - /about.html
+author_profile: false
+# redirect_from: 
+#   - /about/
+#   - /about.html
 ---
 
 {% if site.google_scholar_stats_use_cdn %}
