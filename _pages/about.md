@@ -21,6 +21,8 @@ I am a Master of Computer Science student at the School of Computing & Informati
 
 My research interest focuses on Smart Manufacturing Systems related thing. I have published **0** paper at the top international **AI**, **HCI** and **HRI** conferences with **0** citation.
 
+Hint: Most of the time, I prefer communicating through messages.
+
 ~My current research focuses on digital twins for manufacturing, especially on chemical fiber industry~
 
 
@@ -35,9 +37,9 @@ My research interest focuses on Smart Manufacturing Systems related thing. I hav
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge">CVPR 2016</div><img src='images/500x300.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 
-[Deep Residual Learning for Image Recognition](https://openaccess.thecvf.com/content_cvpr_2016/papers/He_Deep_Residual_Learning_CVPR_2016_paper.pdf)
+[TED-Culture: Make Conversational Virtual Agents and Social Robots Culturally Inclusive](https://openaccess.thecvf.com/content_cvpr_2016/papers/He_Deep_Residual_Learning_CVPR_2016_paper.pdf)
 
-**Kaiming He**, Xiangyu Zhang, Shaoqing Ren, Jian Sun
+**Yixin Shen**, Wafa Johal
 
 [**Project**](https://yixin-shen-1218.github.io/TED_Culture) <strong><span class='show_paper_citations' data='DhtAFkwAAAAJ:ALROH1vI_8AC'></span></strong>
 - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 

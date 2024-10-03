@@ -15,7 +15,7 @@ author_profile: false
 {% endif %}
 {% assign url = gsDataBaseUrl | append: "google-scholar-stats/gs_data_shieldsio.json" %}
 
-<span class='anchor' id='about-me'></span>
+<!-- <span class='anchor' id='about-me'></span> -->
 
 I am a Master of Computer Science student at the School of Computing & Information Systems, Faculty of Engineering and Information Technology, University of Melbourne. I received my Bechelor of Science - Computer Science with Artificial Intelligence at The University of Nottingham Ningbo China.
 
