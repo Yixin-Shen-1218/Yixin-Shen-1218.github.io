@@ -21,7 +21,7 @@ I am a Master of Computer Science student at the School of Computing & Informati
 
 My research interest focuses on Smart Manufacturing Systems related thing. I have published **0** paper at the top international **AI**, **HCI** and **HRI** conferences with **0** citation.
 
-Hint: Most of the time, I prefer communicating through messages.
+Hint: Most of the time, I prefer communicating through text messages.
 
 ~My current research focuses on digital twins for manufacturing, especially on chemical fiber industry~
 
