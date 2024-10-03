@@ -1,6 +1,6 @@
 ---
 permalink: /TED_Culture
-title: "TED_Culture"
+title: ""
 excerpt: ""
 author_profile: false
 # redirect_from: 
