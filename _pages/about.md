@@ -21,7 +21,7 @@ I am a Master of Computer Science student at the School of Computing & Informati
 
 My research interest focuses on Smart Manufacturing Systems related thing. I have published **0** paper at the top international **AI**, **HCI** and **HRI** conferences with **0** citation.
 
-Hint: Most of the time, I prefer communicating through text messages =v=
+Hint: Most of the time, I prefer communicating through text messages
 
 ~My current research focuses on digital twins for manufacturing, especially on chemical fiber industry~
 
@@ -42,7 +42,10 @@ Hint: Most of the time, I prefer communicating through text messages =v=
 **Yixin Shen**, Wafa Johal
 
 [**Project**](https://yixin-shen-1218.github.io/TED_Culture) <strong><span class='show_paper_citations' data='DhtAFkwAAAAJ:ALROH1vI_8AC'></span></strong>
-- Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
+- Introducing the **TED-Culture** Dataset for cross-cultural gesture generation based on linguistic cues. 
+- Developing a novel generative model based on the DiffGesture framework, achieving state-of-the-art performance on the TED-Expressive Dataset and rapid convergence across several languages in the TED-Culture Dataset. 
+- Analyzing cultural factors using the TED-Culture Dataset, showing that people are more critical of outputs in familiar languages. 
+- Developing a robot prototype that maps our model's gestures onto an NAO robot, enabling it to speak six languages with corresponding gestures.
 </div>
 </div>
 
@@ -70,8 +73,8 @@ Hint: Most of the time, I prefer communicating through text messages =v=
 
 
 
-# 💬 Invited Talks
-- *2025.08*, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet.
+<!-- # 💬 Invited Talks
+- *2025.08*, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. -->
 
 
 
