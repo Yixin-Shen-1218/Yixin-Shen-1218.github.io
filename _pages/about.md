@@ -17,7 +17,7 @@ redirect_from:
 
 <span class='anchor' id='about-me'></span>
 
-I am a Master of Computer Science student at the School of Computing & Information Systems, Faculty of Engineering and Information Technology, University of Melbourne. I received my Bechelor of Science - Computer Science with Artificial Intelligence at The University of Nottingham Ningbo China.
+I am a Digital Transformation Analyst at TK Tongkun Co., Ltd. I received my Master of Science - Computer Science at the School of Computing & Information Systems, Faculty of Engineering and Information Technology, University of Melbourne. I received my Bechelor of Science - Computer Science with Artificial Intelligence at The University of Nottingham Ningbo China.
 
 My research interest focuses on Smart Manufacturing Systems related thing. I have published **0** paper at the top international **AI**, **HCI** and **HRI** conferences with **0** citation.
 
@@ -34,7 +34,7 @@ Hint: Most of the time, I prefer communicating through text messages
 
 # 📝 Publications 
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">CVPR 2016</div><img src='images/500x300.png' alt="sym" width="100%"></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">CVPR 2016</div><img src='images/dataset_3.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 
 [TED-Culture: Make Conversational Virtual Agents and Social Robots Culturally Inclusive](https://openaccess.thecvf.com/content_cvpr_2016/papers/He_Deep_Residual_Learning_CVPR_2016_paper.pdf)
