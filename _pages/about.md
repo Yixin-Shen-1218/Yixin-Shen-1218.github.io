@@ -25,7 +25,7 @@ Hint: Most of the time, I prefer communicating through text messages.
 
 ~My current research focuses on digital twins for manufacturing, especially on chemical fiber industry~
 
-And, I am looking for supply chain or trade collaborators for Cross-Border E-Commerce for Fabrics, and of course any academic/industry collaborations under the industry 4.0 theme.
+And I am looking for supply chain or trade collaborators for Cross-Border E-Commerce for Fabrics, and of course any academic/industry collaborations under the Industry 4.0 theme.
 
 # 🔥 News
 - *2022.06*: &nbsp;🎉🎉 Graduated from the University of Nottingham Ningbo China
