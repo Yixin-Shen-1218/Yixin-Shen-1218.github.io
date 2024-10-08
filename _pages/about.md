@@ -38,7 +38,8 @@ And I am looking for supply chain or trade collaborators for Cross-Border E-Comm
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge">CVPR 2016</div><img src='images/dataset_3.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 
-[TED-Culture: Make Conversational Virtual Agents and Social Robots Culturally Inclusive](https://openaccess.thecvf.com/content_cvpr_2016/papers/He_Deep_Residual_Learning_CVPR_2016_paper.pdf)
+<!-- [TED-Culture: Make Conversational Virtual Agents and Social Robots Culturally Inclusive](https://openaccess.thecvf.com/content_cvpr_2016/papers/He_Deep_Residual_Learning_CVPR_2016_paper.pdf) -->
+[TED-Culture: Make Conversational Virtual Agents and Social Robots Culturally Inclusive]
 
 **Yixin Shen**, Wafa Johal
 
