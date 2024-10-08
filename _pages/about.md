@@ -80,7 +80,7 @@ And I am looking for supply chain or trade collaborators for Cross-Border E-Comm
 
 
 
-# 💻 Internships
+# 💻 Projects
 - *2023.07 - 2024.06*, Gesture Generation for Social Robots/Agents
 - *2021.06 - 2022.05*, Deep Learning Based Response Generation for Medical Conversation
 - *2020.06 - 2021.05*, Visualization and Validation of Models for Credit Risk
