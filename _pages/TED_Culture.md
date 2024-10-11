@@ -133,8 +133,8 @@ The Quantitative Results on TED-Culture for each specific language. The results 
 
 # 🌀 Other Links​
 
-**TED_Culture_Dataset github link**: https://github.com/Yixin-Shen-1218/TED_Culture_Dataset
+**TED_Culture_Dataset github link**: [https://github.com/Yixin-Shen-1218/TED_Culture_Dataset](https://github.com/Yixin-Shen-1218/TED_Culture_Dataset)
 
-**Virtual Agent Stimuli**: https://www.youtube.com/playlist?list=PLTTEUXLjZvB9-ViI1ZkmpZdphsQb92cAt
+**Virtual Agent Stimuli**: [https://www.youtube.com/playlist?list=PLTTEUXLjZvB9-ViI1ZkmpZdphsQb92cAt](https://www.youtube.com/playlist?list=PLTTEUXLjZvB9-ViI1ZkmpZdphsQb92cAt)
 
-**Social Robot Stimuli**: https://www.youtube.com/playlist?list=PLTTEUXLjZvB8qEKfwHjQIgOJ3ahP_gOPS
+**Social Robot Stimuli**: [https://www.youtube.com/playlist?list=PLTTEUXLjZvB8qEKfwHjQIgOJ3ahP_gOPS](https://www.youtube.com/playlist?list=PLTTEUXLjZvB8qEKfwHjQIgOJ3ahP_gOPS)
