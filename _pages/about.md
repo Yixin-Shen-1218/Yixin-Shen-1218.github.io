@@ -21,7 +21,7 @@ I am a Digital Transformation Analyst at Tongkun Co., Ltd. I received my Master 
 
 My research interest focuses on Smart Manufacturing Systems related thing. I have published **0** paper at the top international **AI**, **HCI** and **HRI** conferences with **0** citation.
 
-Hint: Most of the time, I prefer communicating through text messages.
+Hint: Most of the time, I prefer communicating through text messages :p
 
 ~My current research focuses on digital twins for manufacturing, especially on chemical fiber industry~
 
