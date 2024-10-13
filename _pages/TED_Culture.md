@@ -29,11 +29,12 @@ Generating natural and expressive co-speech gestures for conversational virtual 
 
 
 # 🌀 Full Experiments
-The Quantitative Results on TED-Culture for each specific language. The results are the **average** of five experimental tests. We compare the proposed diffusion-based method against recent state-of-the-art (SOTA) methods and ground truth. Lower values are better for FGD, while higher values are better for the other metrics.
 
+**The Quantitative Results on TED-Culture for each specific language and merged, as well as TED-Expressive.** The results are the **average** of five experimental tests. We compare the proposed diffusion-based method against recent state-of-the-art (SOTA) methods and ground truth. Lower values are better for FGD, while higher values are better for the other metrics.
 
+## Results for TED-Culture
 
-## A. Indonesian
+### A. Indonesian
 
 | Methods                   | FGD ↓     | BC ↑      | Diversity ↑ |
 | ------------------------- | --------- | --------- | ----------- |
@@ -50,7 +51,7 @@ The Quantitative Results on TED-Culture for each specific language. The results 
 
 
 
-## B. Japanese
+### B. Japanese
 
 | Methods                   | FGD ↓     | BC ↑      | Diversity ↑ |
 | ------------------------- | --------- | --------- | ----------- |
@@ -67,7 +68,7 @@ The Quantitative Results on TED-Culture for each specific language. The results 
 
 
 
-## C. German
+### C. German
 
 | Methods            | FGD ↓     | BC ↑      | Diversity ↑ |
 | ------------------ | --------- | --------- | ----------- |
@@ -82,7 +83,7 @@ The Quantitative Results on TED-Culture for each specific language. The results 
 
 
 
-## D. Italian
+### D. Italian
 
 | Methods                   | FGD ↓     | BC ↑      | Diversity ↑ |
 | ------------------------- | --------- | --------- | ----------- |
@@ -99,7 +100,7 @@ The Quantitative Results on TED-Culture for each specific language. The results 
 
 
 
-## E. French
+### E. French
 
 | Methods            | FGD ↓     | BC ↑      | Diversity ↑ |
 | ------------------ | --------- | --------- | ----------- |
@@ -114,7 +115,7 @@ The Quantitative Results on TED-Culture for each specific language. The results 
 
 
 
-## F. Turkish
+### F. Turkish
 
 | Methods            | FGD ↓     | BC ↑      | Diversity ↑ |
 | ------------------ | --------- | --------- | ----------- |
@@ -127,6 +128,68 @@ The Quantitative Results on TED-Culture for each specific language. The results 
 | DiffGesture        | 5.431     | 0.747     | **112.089** |
 | DiffCulture (Ours) | **5.415** | **0.749** | 100.353     |
 
+
+### G. Merged
+
+| Methods            | FGD ↓     | BC ↑      | Diversity ↑ |
+|--------------------|-----------|-----------|-------------|
+| Ground Truth       | 0         | 0.702     | 181.900     |
+| Attention Seq2Seq  | 27.858    | 0.205     | 150.985     |
+| Speech2Gesture     | 53.676    | 0.567     | 136.512     |
+| Joint Embedding    | 52.993    | 0.135     | 120.380     |
+| Trimodal           | 12.026    | 0.396     | 146.988     |
+| HA2G               | 5.919     | 0.310     | 160.225     |
+| DiffGesture        | **4.216** | **0.728** | **175.025** |
+| DiffCulture (Ours) | 5.532     | 0.722     | 160.603     |
+
+
+## Results for TED-Expressive
+
+| Methods                                       | FGD ↓ | BC ↑ | Diversity ↑ |
+|-----------------------------------------------|------------------|---------------|----------------------|
+| Ground Truth                                  | 0                | 0.703         | 178.827              |
+| Attention Seq2Seq        | 54.920           | 0.152         | 122.693              |
+| Speech2Gesture      | 54.650           | 0.679         | 142.489              |
+| Joint Embedding  | 64.555           | 0.130         | 120.627              |
+| Trimodal                 | 12.613           | 0.563         | 154.088              |
+| HA2G                    | 5.306            | 0.641         | 173.899              |
+| DiffGesture               | 2.600            | **0.718**     | **182.757**          |
+| DiffCulture (Ours)                            | **2.398**        | 0.715         | 177.814              |
+
+# 🌀 Ablation Experiments
+
+## A.Model Structure Experiments
+**The Quantitative Results on TED-Culture Merged, focusing on model structure.** The results are the **average** of five experimental tests. We compared with different model architectures and conducted ablation studies to identify the relatively optimal model structure for this dataset. Lower values are better for FGD, while higher values are better for the other metrics.
+
+| Methods                                                                    | FGD ↓ | BC ↑  | Diversity ↑ |
+|----------------------------------------------------------------------------|------------------|----------------|----------------------|
+| DiffGesture (The original one)                                             | **4.216**     | 0.728          | **175.025**     |
+| DiffGesture (Add the text modality)                                        | 5.185            | 0.729          | 170.311              |
+| DiffGesture (Audio encoder same as the one in `LivelySpeaker: Towards Semantic-Aware Co-Speech Gesture Generation`) | 6.354            | 0.729          | 168.824              |
+| DiffGesture (New Audio Encoder but MSE loss)                               | 4.419            | **0.730** | 173.815              |
+| DiffGesture (MSE loss $\to$ Huber loss, threshold = 1)                     | 4.415            | 0.728          | 174.177              |
+| DiffGesture (MSE loss $\to$ Huber loss, threshold = 0.1)                   | 5.795            | 0.724          | 164.617              |
+| DiffCulture (Ours, New Audio Encoder and Huber loss, threshold = 0.1)      | 5.532            | 0.722          | 160.603              |
+
+## B.Proposed Modules Experiments
+**Ablation Study on the Proposed Modules Based on TED-Culture Merged.** The results are the **average** of five experimental tests. We investigate the effectiveness of the proposed modules: the Diffusion Gesture Stabilizer and implicit classifier-free guidance. Lower values are better for FGD, while higher values are better for the other metrics.
+
+| Methods                         | FGD ↓ | BC ↑  | Diversity ↑ |
+|---------------------------------|------------------|----------------|----------------------|
+| DiffCulture Base                | **5.116**     | **0.727** | 164.837              |
+| DiffCulture w/o Stabilizer      | 6.233            | 0.726          | 162.175              |
+| DiffCulture w/o classifier-free | 5.367            | 0.726          | **166.002**     |
+| DiffCulture (Ours)              | 5.532            | 0.722          | 160.603              |
+
+
+## C.Text Embedding Experiments
+**Ablation study on the impact of using corresponding text embeddings in the DiffCulture model after incorporating the text modality.** The results represent the **average** of five experimental tests. We investigate the impact that whether or not using the corresponding language of FastText Word Embedding can have on model (with text modality) performance. For FGD, lower values indicate better performance, while higher values are preferable for the other metrics.
+
+| Methods                                                                          | FGD ↓ | BC ↑  | Diversity ↑ |
+|----------------------------------------------------------------------------------|------------------|----------------|----------------------|
+| DiffGesture (Add text modality, and use English FastText Word Embeeding)             | **5.185**     | **0.729** | **170.311**     |
+| DiffGesture (Add text modality, and use French FastText Word Embeeding, 500 epochs)  | 12.449           | 0.748          | 101.308              |
+| DiffGesture (Add text modality, and use French FastText Word Embeeding, 1000 epochs) | 5.419            | 0.744          | 110.538              |
 
 
 
