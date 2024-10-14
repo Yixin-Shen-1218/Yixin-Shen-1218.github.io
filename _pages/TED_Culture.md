@@ -10,7 +10,7 @@ redirect_from:
 
 <span class='anchor' id='about-me'></span>
 
-# <center>TED-Culture: Make Conversational Virtual Agents and Social Robots Culturally Inclusive</center>
+# <center>TED-Culture: Culturally Inclusive Co-Speech Gesture Generation for Embodied Social Agents</center>
 
 <center>Yixin Shen*, Wafa Johal</center>
 
