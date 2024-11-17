@@ -183,19 +183,19 @@ Generating natural and expressive co-speech gestures for conversational virtual 
 
 
 ## C.Text Embedding Experiments
-**Ablation study on the impact of using corresponding text embeddings in the DiffCulture model after incorporating the text modality.** The results represent the **average** of five experimental tests. We investigate the impact that whether or not using the corresponding language of FastText Word Embedding can have on model (with text modality) performance. For FGD, lower values indicate better performance, while higher values are preferable for the other metrics.
+**Ablation study on the impact of using corresponding text embeddings in the DiffCulture model after incorporating the text modality on TED-Culture French.** The results represent the **average** of five experimental tests. We investigate the impact that whether or not using the corresponding language of FastText Word Embedding can have on model (with text modality) performance. For FGD, lower values indicate better performance, while higher values are preferable for the other metrics.
 
 | Methods                                                                          | FGD ↓ | BC ↑  | Diversity ↑ |
 |----------------------------------------------------------------------------------|------------------|----------------|----------------------|
-| DiffGesture (Add text modality, and use English FastText Word Embeeding)             | **5.185**     | **0.729** | **170.311**     |
-| DiffGesture (Add text modality, and use French FastText Word Embeeding, 500 epochs)  | 12.449           | 0.748          | 101.308              |
-| DiffGesture (Add text modality, and use French FastText Word Embeeding, 1000 epochs) | 5.419            | 0.744          | 110.538              |
+| DiffCulture (without text modality)                                              | 5.053            | 0.747     | 91.817      |
+| DiffCulture (Add text modality, and use English FastText Word Embeeding)             |     |     |     |
+| DiffCulture (Add text modality, and use French FastText Word Embeeding, 500 epochs)  |     |     |     |
+| DiffCulture (Add text modality, and use French FastText Word Embeeding, 1000 epochs) |     |     |     |
 
 
 
 
 # 🌀 Other Links​
-
 **TED_Culture_Dataset github link**: [https://github.com/Yixin-Shen-1218/TED_Culture_Dataset](https://github.com/Yixin-Shen-1218/TED_Culture_Dataset)
 
 **NAO_Gesture_Generation**: [https://github.com/Yixin-Shen-1218/NAO_Gesture_Generation](https://github.com/Yixin-Shen-1218/NAO_Gesture_Generation)
