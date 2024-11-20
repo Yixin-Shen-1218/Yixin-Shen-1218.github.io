@@ -187,8 +187,8 @@ Generating natural and expressive co-speech gestures for conversational virtual 
 
 | Methods                                                                          | FGD ↓ | BC ↑  | Diversity ↑ |
 |----------------------------------------------------------------------------------|------------------|----------------|----------------------|
-| DiffCulture (Without text modality, 500 epochs)                                              | 5.053            | 0.747     | 91.817      |
-| DiffCulture (Add text modality, and use English FastText Word Embeeding, 500 epochs)             |     |     |     |
+| DiffCulture (Without text modality, 500 epochs)                                      | 5.053            | 0.747     | 91.817      |
+| DiffCulture (Add text modality, and use English FastText Word Embeeding, 500 epochs) |     |     |     |
 | DiffCulture (Add text modality, and use French FastText Word Embeeding, 500 epochs)  |     |     |     |
 | DiffCulture (Add text modality, and use French FastText Word Embeeding, 1000 epochs) |     |     |     |
 
@@ -197,6 +197,8 @@ Generating natural and expressive co-speech gestures for conversational virtual 
 
 # 🌀 Other Links​
 **TED_Culture_Dataset github link**: [https://github.com/Yixin-Shen-1218/TED_Culture_Dataset](https://github.com/Yixin-Shen-1218/TED_Culture_Dataset)
+
+**TED_Culture_Visualizer**: [https://github.com/Yixin-Shen-1218/TED_Culture_Visualizer](https://github.com/Yixin-Shen-1218/TED_Culture_Visualizer)
 
 **NAO_Gesture_Generation**: [https://github.com/Yixin-Shen-1218/NAO_Gesture_Generation](https://github.com/Yixin-Shen-1218/NAO_Gesture_Generation)
 
