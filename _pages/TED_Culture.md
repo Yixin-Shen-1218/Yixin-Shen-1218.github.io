@@ -254,7 +254,7 @@ Generating natural and expressive co-speech gestures for conversational virtual 
 
 
 # 🌀 Other Links​
-**TED_Culture_Dataset github link**: [https://github.com/Yixin-Shen-1218/TED_Culture_Dataset](https://github.com/Yixin-Shen-1218/TED_Culture_Dataset)
+**TED_Culture_Dataset**: [https://github.com/Yixin-Shen-1218/TED_Culture_Dataset](https://github.com/Yixin-Shen-1218/TED_Culture_Dataset)
 
 **TED_Culture_Visualizer**: [https://github.com/Yixin-Shen-1218/TED_Culture_Visualizer](https://github.com/Yixin-Shen-1218/TED_Culture_Visualizer)
 
