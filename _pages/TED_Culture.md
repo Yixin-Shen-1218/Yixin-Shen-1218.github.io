@@ -158,6 +158,8 @@ Generating natural and expressive co-speech gestures for conversational virtual 
 
 
 # 🌀 Subjective Evaluation
+## Demographic
+
 <p align="center">
   <img src="../images/TED_Culture/Histogram_of_Gender.png" alt="Histogram of Gender">
   <br>
@@ -185,6 +187,30 @@ Generating natural and expressive co-speech gestures for conversational virtual 
   <br>
   <i>Auxiliary Information about New Technology, Video Games and Music</i>
 </p>
+
+## Model Performance
+**User Study Results.** The ratings for motion naturalness, smoothness, and synchrony are assessed on a scale of 1 to 5, where 5 indicates the highest performance. All the results in the table are presented in the format of Average (SD).
+
+| Methods                                       | Naturalness ↓ | Smoothness ↑ | Synchrony ↑ |
+|-----------------------------------------------|------------------|---------------|----------------------|
+| Ground Truth        | 2.21 (0.94)      | 1.96 (0.74)  | 2.21 (0.86)     |
+| Attention Seq2Seq   | **3.15** (0.69)      | **3.57** (0.52)  | **3.05** (0.64)     |
+| Speech2Gesture      | 2.91 (0.73)    | 2.56 (0.65)   | 3.03 (0.80)     |
+| Joint Embedding     | 2.66 (0.65)      | 3.37 (0.44)    | 2.41 (0.64)          |
+| Trimodal            | 2.74 (1.01)      | 2.27 (0.82)   | 2.74 (1.04)          |
+| HA2G                | 1.98 (0.69)      | 1.86 (0.64)   | 1.91 (0.64)         |
+| DiffGesture         | 2.29 (0.81)      | 2.11 (0.59)   | 2.43 (0.63)          |
+| DiffCulture (Ours)  | 2.59 (0.83)      | 2.27 (0.70)   | 2.52 (0.80)          |
+
+
+**The correlation between language acquisition and the cultural back-ground of the participants.** The ratings for motion naturalness, smoothness, and synchrony are assessed on a scale of 1 to 5, where 5 indicates the highest performance. All the participants’ first or secondary proficient language is Indonesian. All the results in the table are presented in the format of Average (SD).
+
+| Video Type                                  | Naturalness ↓ | Smoothness ↑ | Synchrony ↑ |
+|-----------------------------------------------|------------------|---------------|----------------------|
+| Indonesian Videos        | 1.94 (1.07)       | **2.18** (1.16)  | 1.80 (1.16)        |
+| Non-Indonesian Videos    | **2.34 (1.05)**   | **2.18** (1.14)  | **2.34** (1.01)         |
+
+
 
 
 
