@@ -28,7 +28,7 @@ Generating natural and expressive co-speech gestures for conversational virtual 
 
 
 
-# 🌀 Full Experiments
+# 🌀 Objective Evaluation
 
 **The Quantitative Results on TED-Culture for each specific language and merged, as well as TED-Expressive.** The results are the **average** of five experimental tests. We compare the proposed diffusion-based method against recent state-of-the-art (SOTA) methods and ground truth. Lower values are better for FGD, while higher values are better for the other metrics.
 
@@ -155,6 +155,38 @@ Generating natural and expressive co-speech gestures for conversational virtual 
 | HA2G                    | 5.306            | 0.641         | 173.899              |
 | DiffGesture               | 2.600            | **0.718**     | **182.757**          |
 | DiffCulture (Ours)                            | **2.398**        | 0.715         | 177.814              |
+
+
+# 🌀 Subjective Evaluation
+<p align="center">
+  <img src="../images/TED_Culture/Histogram_of_Gender.png" alt="Histogram of Gender">
+  <br>
+  <i>Histogram of Gender</i>
+</p>
+
+
+
+<p align="center">
+  <img src="../images/TED_Culture/Histogram_of_Age.png" alt="Histogram of Age">
+  <br>
+  <i>Histogram of Age</i>
+</p>
+
+
+<p align="center">
+  <img src="../images/TED_Culture/Language_Acquisition.png" alt="Language Acquisition Stats">
+  <br>
+  <i>Language Acquisition Stats</i>
+</p>
+
+
+<p align="center">
+  <img src="../images/TED_Culture/New_tech_game_music.png" alt="Auxiliary Information about New Technology, Video Games and Music">
+  <br>
+  <i>Auxiliary Information about New Technology, Video Games and Music</i>
+</p>
+
+
 
 # 🌀 Ablation Experiments
 
