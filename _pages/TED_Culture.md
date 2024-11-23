@@ -246,9 +246,9 @@ Generating natural and expressive co-speech gestures for conversational virtual 
 | Methods                                                                          | FGD ↓ | BC ↑  | Diversity ↑ |
 |----------------------------------------------------------------------------------|------------------|----------------|----------------------|
 | DiffCulture (Without text modality, 500 epochs)                                      | 5.053            | 0.747     | 91.817      |
-| DiffCulture (Add text modality, and use English FastText Word Embeeding, 500 epochs) |     |     |     |
-| DiffCulture (Add text modality, and use French FastText Word Embeeding, 500 epochs)  |     |     |     |
-| DiffCulture (Add text modality, and use French FastText Word Embeeding, 1000 epochs) |     |     |     |
+| DiffCulture (Add text modality, and use English FastText Word Embeeding, 500 epochs) |  5.003   |  0.749   |  96.225   |
+| DiffCulture (Add text modality, and use French FastText Word Embeeding, 500 epochs)  |  10.691   |  0.750   |  101.947  |
+| DiffCulture (Add text modality, and use French FastText Word Embeeding, 1000 epochs) |  5.205   |  0.745   |  96.936  |
 
 
 
