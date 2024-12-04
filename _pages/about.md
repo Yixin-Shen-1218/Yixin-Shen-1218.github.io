@@ -17,20 +17,18 @@ redirect_from:
 
 <span class='anchor' id='about-me'></span>
 
-I am a Digital Transformation Analyst at Tongkun Co., Ltd. I received my Master of Science - Computer Science at the School of Computing & Information Systems, Faculty of Engineering and Information Technology, University of Melbourne and Bechelor of Science - Computer Science with Artificial Intelligence at The University of Nottingham Ningbo China.
+I am an Emboided AI researcher. I received my Master of Science - Computer Science at the School of Computing & Information Systems, Faculty of Engineering and Information Technology, University of Melbourne and Bechelor of Science - Computer Science with Artificial Intelligence at The University of Nottingham Ningbo China.
 
 My research interest focuses on Smart Manufacturing Systems related thing. I have published **0** paper at the top international **AI**, **HCI** and **HRI** conferences with **0** citation.
 
-Hint: Most of the time, I prefer communicating through text messages :p
+Most of the time, I prefer communicating through text messages :p
 
-~My current research focuses on digital twins for manufacturing, especially on chemical fiber industry~
-
-And I am looking for supply chain or trade collaborators for Cross-Border E-Commerce for Fabrics, and of course any academic/industry collaborations under the Industry 4.0 theme.
+And I am looking for supply chain or trade collaborators for Cross-Border E-Commerce for Fabrics, and of course any academic/industry collaborations under the Emboided AI theme.
 
 # 🔥 News
 - *2022.06*: &nbsp;🎉🎉 Graduated from the University of Nottingham Ningbo China
 - *2024.07*: &nbsp;🎉🎉 Graduated from the University of Melbourne
-- *2024.08*: &nbsp;🎉🎉 Start a new role at Tongkun Co., Ltd as a Digital Transformation Analyst
+- *2024.08*: &nbsp;🎉🎉 Start a new internship at Tongkun Co., Ltd as a Digital Transformation Analyst
 
 
 # 📝 Publications 
