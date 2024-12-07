@@ -17,13 +17,13 @@ redirect_from:
 
 <span class='anchor' id='about-me'></span>
 
-I am an Embodied AI researcher. I received my Master of Science - Computer Science at the School of Computing & Information Systems, Faculty of Engineering and Information Technology, University of Melbourne and Bechelor of Science - Computer Science with Artificial Intelligence at The University of Nottingham Ningbo China.
+I am an Embodied Intelligence researcher. I received my Master of Science - Computer Science at the School of Computing & Information Systems, Faculty of Engineering and Information Technology, University of Melbourne and Bechelor of Science - Computer Science with Artificial Intelligence at The University of Nottingham Ningbo China.
 
-My research interest focuses on Embodied AI related thing. I have published **0** paper at the top international **AI**, **HCI** and **HRI** conferences with **0** citation.
+My research interest focuses on Embodied Intelligence related thing. I have published **0** paper at the top international **AI**, **HCI** and **HRI** conferences with **0** citation.
 
 Most of the time, I prefer communicating through text messages :p
 
-And I am looking for supply chain or trade collaborators for Cross-Border E-Commerce for Fabrics, and of course any academic/industry collaborations under the Embodied AI theme.
+And I am looking for supply chain or trade collaborators for Cross-Border E-Commerce for Fabrics, and of course any academic/industry collaborations under the Embodied Intelligence theme.
 
 # 🔥 News
 - *2022.06*: &nbsp;🎉🎉 Graduated from the University of Nottingham Ningbo China
