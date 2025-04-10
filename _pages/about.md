@@ -17,7 +17,7 @@ redirect_from:
 
 <span class='anchor' id='about-me'></span>
 
-I am an Embodied Intelligence researcher. I received my Master of Science - Computer Science at The University of Melbourne and Bechelor of Science - Computer Science with Artificial Intelligence at The University of Nottingham Ningbo China.
+I am an Embodied Intelligence researcher. I received my Master of Science - Computer Science at The University of Melbourne and Bachelor of Science - Computer Science with Artificial Intelligence at The University of Nottingham Ningbo China.
 
 My research interest focuses on Embodied Intelligence related thing. I have published **0** paper at the top international **AI**, **HCI** and **HRI** conferences with **0** citation.
 
