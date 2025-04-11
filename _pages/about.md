@@ -69,7 +69,7 @@ And I am looking for supply chain or trade collaborators for Cross-Border E-Comm
 
 # 📖 Educations
 - *2022.07 - 2024.07*, Master of Computer Science, University of Melbourne
-- *2018.09 - 2022.06*, Becholar of Science - Computer Science with Artificial Ingelligence, Univeristy of Nottingham Ningbo China
+- *2018.09 - 2022.06*, Bachelor of Science - Computer Science with Artificial Ingelligence, Univeristy of Nottingham Ningbo China
 
 
 
