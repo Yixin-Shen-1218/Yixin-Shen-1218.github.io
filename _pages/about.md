@@ -33,7 +33,7 @@ And I am looking for supply chain or trade collaborators for Cross-Border E-Comm
 
 # 📝 Publications 
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">Under Reviewing</div><img src='images/dataset_3.png' alt="sym" width="100%"></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">Front. Robot. AI 2025</div><img src='images/dataset_3.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 
 [TED-Culture: Make Conversational Virtual Agents and Social Robots Culturally Inclusive](https://www.frontiersin.org/journals/robotics-and-ai/articles/10.3389/frobt.2025.1546765/full)
