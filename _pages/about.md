@@ -19,7 +19,7 @@ redirect_from:
 
 I am an Embodied Intelligence researcher. I received my Master of Science - Computer Science at The University of Melbourne and Bachelor of Science - Computer Science with Artificial Intelligence at The University of Nottingham Ningbo China.
 
-My research interest focuses on Embodied Intelligence related thing. I have published **1** paper at the top international **AI**, **HCI** and **HRI** journals/conferences with total <a href='https://scholar.google.com/citations?user=YOUR_GOOGLE_SCHOLAR_ID&user=Z_wN_FUAAAAJ'>google scholar citations.
+My research interest focuses on Embodied Intelligence related thing. I have published **1** paper <a href='https://scholar.google.com/citations?user=Z_wN_FUAAAAJ'><img src="https://img.shields.io/endpoint?url={{ url | url_encode }}&logo=Google%20Scholar&labelColor=f6f6f6&color=9cf&style=flat&label=citations"></a> at the top international **AI**, **HCI** and **HRI** journals/conferences.
 
 Most of the time, I prefer communicating through text messages :p
 
