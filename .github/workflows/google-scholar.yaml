@@ -2,7 +2,7 @@ name: Update Google Scholar Stats
 
 on:
   schedule:
-    # Every Monday at 00:00 UTC (08:00 UTC+8)
+    # Every Monday at 00:00 UTC (08:00 Beijing time)
     - cron: '0 0 * * 1'
   workflow_dispatch:
 
@@ -12,7 +12,7 @@ permissions:
 jobs:
   update-scholar:
     runs-on: ubuntu-latest
-    timeout-minutes: 5
+    timeout-minutes: 6
 
     steps:
       - name: Checkout
@@ -25,8 +25,35 @@ jobs:
 
       - name: Install scholarly
         run: |
-          python -m pip install "scholarly==1.7.11" "bibtexparser==1.4.3"
+          python -m pip install \
+            "scholarly==1.7.11" \
+            "bibtexparser==1.4.3"
 
+      # Diagnostic request to identify network problems
+      - name: Test Google Scholar connectivity
+        id: connectivity
+        continue-on-error: true
+        timeout-minutes: 1
+        run: |
+          echo "Testing Google Scholar connectivity..."
+
+          curl -L -sS \
+            --connect-timeout 10 \
+            --max-time 20 \
+            -o /tmp/scholar_response.html \
+            -w "HTTP status: %{http_code}\nTotal time: %{time_total}s\n" \
+            "https://scholar.google.com/citations?user=Z_wN_FUAAAAJ&hl=en"
+
+          echo "Downloaded bytes:"
+          wc -c /tmp/scholar_response.html
+
+          echo "Checking response content..."
+          if grep -qiE "captcha|unusual traffic|recaptcha" \
+            /tmp/scholar_response.html; then
+            echo "::warning::Possible Google Scholar anti-bot protection."
+          fi
+
+      # Fetch citations with visible progress and timeout
       - name: Fetch Google Scholar stats
         timeout-minutes: 3
         run: |
@@ -35,18 +62,34 @@ jobs:
           import time
           from scholarly import scholarly
 
+          AUTHOR_ID = "Z_wN_FUAAAAJ"
+          OUTPUT_FILE = "gs_data_shieldsio.json"
+
           start = time.monotonic()
 
           print("Step 1: Fetching author ID...", flush=True)
-          author = scholarly.search_author_id("Z_wN_FUAAAAJ")
-          print(f"Step 1 completed: {time.monotonic()-start:.1f}s", flush=True)
+
+          author = scholarly.search_author_id(AUTHOR_ID)
+
+          print(
+              f"Step 1 completed in "
+              f"{time.monotonic()-start:.1f}s",
+              flush=True
+          )
 
           print("Step 2: Fetching author details...", flush=True)
+
           author = scholarly.fill(author)
-          print(f"Step 2 completed: {time.monotonic()-start:.1f}s", flush=True)
+
+          print(
+              f"Step 2 completed in "
+              f"{time.monotonic()-start:.1f}s",
+              flush=True
+          )
 
           citations = author["citedby"]
-          print(f"Citations: {citations}", flush=True)
+
+          print(f"Total citations: {citations}", flush=True)
 
           data = {
               "schemaVersion": 1,
@@ -55,16 +98,21 @@ jobs:
               "color": "9cf"
           }
 
-          with open("gs_data_shieldsio.json", "w") as f:
-              json.dump(data, f)
+          with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
+              json.dump(data, f, ensure_ascii=False, indent=2)
 
-          print("Google Scholar stats updated successfully.")
+          print(
+              "Google Scholar stats updated successfully.",
+              flush=True
+          )
           EOF
 
+      # Commit only when citation data changes
       - name: Commit and push changes
         run: |
           git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git config user.email \
+            "41898282+github-actions[bot]@users.noreply.github.com"
 
           git add gs_data_shieldsio.json
 
