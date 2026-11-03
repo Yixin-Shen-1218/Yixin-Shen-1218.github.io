@@ -2,8 +2,10 @@ name: Update Google Scholar Stats
 
 on:
   schedule:
-    # Every Monday at 00:00 UTC (08:00 Beijing time)
+    # Every Monday 00:00 UTC = 08:00 Beijing time
     - cron: '0 0 * * 1'
+
+  # Allow manual execution
   workflow_dispatch:
 
 permissions:
@@ -12,102 +14,104 @@ permissions:
 jobs:
   update-scholar:
     runs-on: ubuntu-latest
-    timeout-minutes: 6
+    timeout-minutes: 5
 
     steps:
+      # 1. Checkout repository
       - name: Checkout
         uses: actions/checkout@v4
 
+      # 2. Setup Python
       - name: Setup Python
         uses: actions/setup-python@v5
         with:
           python-version: '3.11'
 
-      - name: Install scholarly
+      # 3. Install requests
+      - name: Install dependencies
         run: |
-          python -m pip install \
-            "scholarly==1.7.11" \
-            "bibtexparser==1.4.3"
+          python -m pip install "requests>=2.31,<3"
 
-      # Diagnostic request to identify network problems
-      - name: Test Google Scholar connectivity
-        timeout-minutes: 1
-        run: |
-          python - <<'PY'
-          import requests
-          from bs4 import BeautifulSoup
-
-          url = "https://scholar.google.com/citations?user=Z_wN_FUAAAAJ&hl=en"
-
-          try:
-              r = requests.get(url, timeout=20)
-
-              print("HTTP status:", r.status_code)
-              print("Final URL:", r.url)
-              print("Response bytes:", len(r.content))
-
-              soup = BeautifulSoup(r.text, "html.parser")
-
-              print("Page title:",
-                    soup.title.get_text(strip=True)
-                    if soup.title else "None")
-
-              print("Canonical link:",
-                    bool(soup.find("link", rel="canonical")))
-
-              print("Scholar profile:",
-                    bool(soup.select_one("#gsc_prf_in")))
-
-              print("Citation table:",
-                    bool(soup.select_one("#gsc_rsb_st")))
-
-              if "captcha" in r.text.lower() or "unusual traffic" in r.text.lower():
-                  print("WARNING: Possible Google Scholar access restriction")
-
-          except requests.RequestException as e:
-              print("Network error:", repr(e))
-              raise
-          PY
-
-
-      # Fetch citations with visible progress and timeout
+      # 4. Fetch citations from SerpApi
       - name: Fetch Google Scholar stats
-        timeout-minutes: 3
+        timeout-minutes: 2
+        env:
+          SERPAPI_API_KEY: ${{ secrets.SERPAPI_API_KEY }}
         run: |
-          python -u <<'EOF'
+          python -u <<'PY'
+          import os
+          import sys
           import json
-          import time
-          from scholarly import scholarly
+          import requests
 
           AUTHOR_ID = "Z_wN_FUAAAAJ"
           OUTPUT_FILE = "gs_data_shieldsio.json"
+          API_URL = "https://serpapi.com/search.json"
 
-          start = time.monotonic()
+          api_key = os.getenv("SERPAPI_API_KEY")
 
-          print("Step 1: Fetching author ID...", flush=True)
+          if not api_key:
+              sys.exit("ERROR: SERPAPI_API_KEY is missing.")
 
-          author = scholarly.search_author_id(AUTHOR_ID)
+          print("Fetching Google Scholar citations via SerpApi...")
 
-          print(
-              f"Step 1 completed in "
-              f"{time.monotonic()-start:.1f}s",
-              flush=True
-          )
+          params = {
+              "engine": "google_scholar_author",
+              "author_id": AUTHOR_ID,
+              "hl": "en",
+              "api_key": api_key
+          }
 
-          print("Step 2: Fetching author details...", flush=True)
+          try:
+              response = requests.get(
+                  API_URL,
+                  params=params,
+                  timeout=(10, 45)
+              )
+          except requests.RequestException:
+              sys.exit("ERROR: SerpApi network request failed.")
 
-          author = scholarly.fill(author)
+          print("HTTP status:", response.status_code)
 
-          print(
-              f"Step 2 completed in "
-              f"{time.monotonic()-start:.1f}s",
-              flush=True
-          )
+          if response.status_code != 200:
+              sys.exit("ERROR: SerpApi returned a non-200 status.")
 
-          citations = author["citedby"]
+          try:
+              result = response.json()
+          except ValueError:
+              sys.exit("ERROR: Invalid JSON response.")
 
-          print(f"Total citations: {citations}", flush=True)
+          if result.get("error"):
+              sys.exit("ERROR: SerpApi reported an API error.")
 
+          status = result.get("search_metadata", {}).get("status")
+          print("API status:", status)
+
+          if status != "Success":
+              sys.exit("ERROR: SerpApi search was not successful.")
+
+          # Extract total Google Scholar citations
+          citation_table = result.get(
+              "cited_by", {}
+          ).get("table", [])
+
+          citations = None
+
+          for item in citation_table:
+              if "citations" in item:
+                  citations = item["citations"].get("all")
+                  break
+
+          if (
+              not isinstance(citations, int)
+              or isinstance(citations, bool)
+              or citations < 0
+          ):
+              sys.exit("ERROR: Invalid citation count.")
+
+          print("Total citations:", citations)
+
+          # Preserve the existing Shields.io JSON format
           data = {
               "schemaVersion": 1,
               "label": "citations",
@@ -115,16 +119,26 @@ jobs:
               "color": "9cf"
           }
 
+          # Avoid rewriting when citation count is unchanged
+          if os.path.exists(OUTPUT_FILE):
+              try:
+                  with open(OUTPUT_FILE, "r", encoding="utf-8") as f:
+                      old_data = json.load(f)
+
+                  if old_data == data:
+                      print("Citation data unchanged.")
+                      sys.exit(0)
+              except (OSError, ValueError):
+                  print("Existing JSON unreadable; replacing it.")
+
           with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
               json.dump(data, f, ensure_ascii=False, indent=2)
+              f.write("\n")
 
-          print(
-              "Google Scholar stats updated successfully.",
-              flush=True
-          )
-          EOF
+          print("Citation data updated successfully.")
+          PY
 
-      # Commit only when citation data changes
+      # 5. Commit and push only if data changed
       - name: Commit and push changes
         run: |
           git config user.name "github-actions[bot]"
@@ -134,8 +148,9 @@ jobs:
           git add gs_data_shieldsio.json
 
           if git diff --cached --quiet; then
-            echo "No citation changes. Skipping commit."
+            echo "No changes. Skipping commit."
           else
-            git commit -m "Update Google Scholar stats"
+            git commit -m "Update Google Scholar citations"
             git push
+            echo "Citation data pushed successfully."
           fi
